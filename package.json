@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "description": "Node.js on Docker",
   "author": "Ramon Schmidt <ramonroc@gmail.com>",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "babel-node ./server.js"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "body-parser": "~1.0.1",
     "express": "^4.13.3",
     "mongoose": "4.1.9"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-preset-es2016": "^6.24.1"
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
   }
 }
