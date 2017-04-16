@@ -11,5 +11,9 @@
     "body-parser": "~1.0.1",
     "express": "^4.13.3",
     "mongoose": "4.1.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1"
   }
 }
