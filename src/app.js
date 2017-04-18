@@ -1,11 +1,15 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import routes from './routes';
 
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => res.send('Hello World!'));
+/**
+ * All requisitions will be administrate by routes index
+ */
+app.use('/', routes);
 
 export default app;
