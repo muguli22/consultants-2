@@ -1,15 +1,21 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import routes from './routes';
+import database from './config/database';
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+const configureExpress = () => {
+    app.use(bodyParser.urlencoded({extended: true}));
+    app.use(bodyParser.json());
 
+    /**
+     * All requisitions will be administrate by routes index
+     */
+    app.use('/', routes);
+    return app;
+};
 /**
- * All requisitions will be administrate by routes index
+ * Pattern chained promises
  */
-app.use('/', routes);
-
-export default app;
+export default () => database.connect().then(configureExpress);

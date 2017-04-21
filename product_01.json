@@ -1,0 +1,68 @@
+//db.purchase.find( { "products.item": "objectid1", "products.items.sold": "true"} )
+{
+    "products": [
+      {
+        "item": "objectid1",
+        "qtd": 3,
+        "items":[
+          {
+            "cost": 100.02,
+            "sold": null,
+            "isSold": true
+          },
+          {
+            "cost": 100.02,
+            "sold": null,
+            "isSold": false
+          },
+          {
+            "cost": 100.02,
+            "sold": null,
+            "isSold": false
+          }
+        ]
+      },
+      {
+        "item": "objectid2",
+        "qtd": 3,
+        "items":[
+          {
+            "cost": 100.02,
+            "sold": null,
+            "isSold": true
+          },
+          {
+            "cost": 100.02,
+            "sold": null,
+            "isSold": false
+          },
+          {
+            "cost": 100.02,
+            "sold": null,
+            "isSold": false
+          }
+        ]
+      },
+      {
+        "item": "objectid3",
+        "qtd": 3,
+        "items":[
+          {
+            "cost": 100.02,
+            "sold": null,
+            "isSold": true
+          },
+          {
+            "cost": 100.02,
+            "sold": null,
+            "isSold": false
+          },
+          {
+            "cost": 100.02,
+            "sold": null,
+            "isSold": false
+          }
+        ]
+      }
+    ]
+}
